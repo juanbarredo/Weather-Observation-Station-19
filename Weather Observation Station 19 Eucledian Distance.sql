@@ -78,7 +78,7 @@ SELECT MIN(LAT_N) AS 'a = MIN(LAT_N)'
 --let me now get 'c'.
 
 USE Weather_Observation_Station_2;
-SELECT MAX(LAT_N) AS 'c = MAX(LAT_N)'
+SELECT MAX(LAT_N) AS 'b = MAX(LAT_N)'
 	FROM STATION;
 
 	--so compelling seing the resulting sets.
@@ -98,7 +98,75 @@ SELECT LONG_W
 
 --I am excited to carry this forth.
 
+-------------------------------02 16 2025------------------------------------------
 
+--I have started looking a little bit more at machine learnign using just tsql.
+--I think that the most that I can find is that tsql can set up a really nice stream of data packaged up for python, r, or somthing else.
+--but that's it.
 
+--the next thing is that sql is added a layer.  a userdefined function layer, or a procedural languange layer.
 
+--at some point a llayer must be added to the one that I am just using right now.
 
+--I want to work on this layer as much as possible.
+
+--I think the next step might be to get a dataset installed.
+--the iris data set could be next.
+
+--could I install a big data set?
+
+--ok,
+
+--moving on to this problem although I am very excited to set up the new data sets.
+
+--I am now needing to get MIN(LONG_W) as 
+
+--"(c,d) are the respective minimum and maximum 
+--values of Western Longtitude (LONG_W)
+--in STATION."
+
+--c = MING(LONG_W)
+
+USE Weather_Observation_Station_2;
+SELECT MIN(LONG_W) AS 'c = MIN(LONG_W)'
+	FROM STATION;
+
+--Ok!
+--I have solved for 'c'
+--next is 'd'.
+--i need to work on relabeling a few things.
+
+--ok!
+--I may need a way to visualize the coordinates better.
+
+--i was thinking I could use that mindmapping software next time I need to set things up graphically.
+
+--I could upload the file to github as well.
+
+--so, 'd'.
+
+--'d' is MAX(LONG_W)
+
+USE	Weather_Observation_Station_2;
+SELECT MAX(LONG_W) AS 'd = MAX(LONG_W)'
+	FROM STATION;
+
+--I believe that I now need to format for two things at once.
+--I need to know what the formula of the Eucledian distance is
+--so that I can organize p1 and p2 in a query?
+
+--d( p, q ) = square root ((p1-q1)squared + (p2 - q2)squared)
+--d(p1,p2) = square root((a-b)squared + (c-d)squared)
+--does the above line up?
+--I think it does.
+
+--ok,
+--p1 = (a,c)
+
+--ok,
+--I am excited to keep working on this.
+--I may need to see about starting the other data set projects sometime?
+
+--I know that there are a lot of resources for the ones I have in mind.
+--since I saw them one the mssql website.
+-p2
