@@ -45,9 +45,9 @@
 
 --The first part I want to break into is a simple SELECT *
 
-USE Weather_Observation_Station_2
-SELECT *
-	FROM STATION;
+--USE Weather_Observation_Station_2
+--SELECT *
+--	FROM STATION;
 
 	--ok, felt great to get that going.
 
@@ -65,21 +65,21 @@ SELECT *
 --so,
 --let me now get "a" 
 
-USE Weather_Observation_Station_2;
-SELECT LAT_N
-	FROM STATION;
+--USE Weather_Observation_Station_2;
+--SELECT LAT_N
+--	FROM STATION;
 
-USE Weather_Observation_Station_2
-SELECT MIN(LAT_N) AS 'a = MIN(LAT_N)'
-	FROM STATION; 
+--USE Weather_Observation_Station_2
+--SELECT MIN(LAT_N) AS 'a = MIN(LAT_N)'
+--	FROM STATION; 
 
 	--amazing seeing that result!
 
 --let me now get 'c'.
 
-USE Weather_Observation_Station_2;
-SELECT MAX(LAT_N) AS 'b = MAX(LAT_N)'
-	FROM STATION;
+--USE Weather_Observation_Station_2;
+--SELECT MAX(LAT_N) AS 'b = MAX(LAT_N)'
+--	FROM STATION;
 
 	--so compelling seing the resulting sets.
 
@@ -87,9 +87,9 @@ SELECT MAX(LAT_N) AS 'b = MAX(LAT_N)'
 
 --let me get 'b' next
 
-USE Weather_Observation_Station_2;
-SELECT LONG_W
-	FROM STATION;
+--USE Weather_Observation_Station_2;
+--SELECT LONG_W
+--	FROM STATION;
 
 	--Ok, time to finish.
 
@@ -127,9 +127,9 @@ SELECT LONG_W
 
 --c = MING(LONG_W)
 
-USE Weather_Observation_Station_2;
-SELECT MIN(LONG_W) AS 'c = MIN(LONG_W)'
-	FROM STATION;
+--USE Weather_Observation_Station_2;
+--SELECT MIN(LONG_W) AS 'c = MIN(LONG_W)'
+--	FROM STATION;
 
 --Ok!
 --I have solved for 'c'
@@ -147,9 +147,9 @@ SELECT MIN(LONG_W) AS 'c = MIN(LONG_W)'
 
 --'d' is MAX(LONG_W)
 
-USE	Weather_Observation_Station_2;
-SELECT MAX(LONG_W) AS 'd = MAX(LONG_W)'
-	FROM STATION;
+--USE	Weather_Observation_Station_2;
+--SELECT MAX(LONG_W) AS 'd = MAX(LONG_W)'
+--	FROM STATION;
 
 --I believe that I now need to format for two things at once.
 --I need to know what the formula of the Eucledian distance is
@@ -169,4 +169,49 @@ SELECT MAX(LONG_W) AS 'd = MAX(LONG_W)'
 
 --I know that there are a lot of resources for the ones I have in mind.
 --since I saw them one the mssql website.
--p2
+--p2
+
+----------------------------------02 17 2025------------------------------------------
+
+
+
+--so,
+--I have solved for all the things.
+--i need to puth them together in the Eucledian formula which I had a hard time grasping so i was breaking it into small chunks.
+
+--where did I leave off.
+
+--p1 = (a,c)
+--p2 = (b,d)
+
+--d( p, q ) = square root ((p1-q1)squared + (p2 - q2)squared)
+--d(p1,p2) = square root((a-b)squared + (c-d)squared)
+
+--ok,
+--let's move on to the next step
+
+--putting aquery together.
+
+--USE Weather_Observation_Station_2;
+--SELECT SQRT(SQUARE(MIN(LAT_N) - MAX(LAT_N)) + SQUARE(MIN(LONG_W) - MAX(LONG_W))) AS 'EUCLEDIAN DISTANCE'
+--	FROM STATION;
+
+	--really enjoyed how my fingers flew through the cerakey typewritter.
+	--really nice.
+
+--ok,
+--now I want to work on the "format your answer to display 4 decimal digits."
+
+--is this going to be my usual display as decimat (7,4) or (10,4) lol
+--sorry CAST AS DECIMAL (7,4)
+--I am still not clear on the (7,4) but it might just work.
+
+USE Weather_Observation_Station_2;
+SELECT CAST(SQRT(SQUARE(MIN(LAT_N) - MAX(LAT_N)) + SQUARE(MIN(LONG_W) - MAX(LONG_W))) AS DECIMAL (7,4)) 
+	FROM STATION;
+
+	--I will not attempt to type up the query in lines 223 to 225 on the Hacker Rank input window spot.
+
+	--I got the right answer of course!
+
+	--ok, let me clean this up to turn in.
